@@ -1,0 +1,11 @@
+study_id,authors,year,no_subjects,scnnr_mgntc_strngth,scnnr_model,scnnr_tr,scnnr_te,acq_matrix,acq_slices,acq_fa,vxl_dim_1,vxl_dim_2,vxl_dim_3,stmli_type,stmli_coll,pre_proc_tool,classi_tchnqe,classi_accuracy
+1,Kim et al.,2016,11,3,siemens,2200,35,64,36,90,3,3,3,audio-visual,own,spm,logistic-regression,0.66
+2,Chan et al.,2020,28,3,siemens,2070,30,64,34,90,3.5,3.5,3,image,iaps,spm,svm,0.811
+3,Frid et al.,2019,11,3,siemens,2000,30,64,33,80,3,3,4,autobiographical-memories,navo-ando,spm,adaboost,0.81
+4,Bo et al.,2022,26,,,,,,,,,,,image,iaps,spm,svm,0.59
+5,Fournel et al.,2011,16,3,allegra,3000,30,64,49,80,3,3,3,image,own,fsl,self-org-map,0.854
+6,Putkinen et al.,2020,102,3,philips,2600,30,80,45,75,3,3,3,instrumental-music,,spm,glm,0.49
+7,Yoshida,2016,5,3,siemens,,,,,,,,,image,iaps,spm,svm,0.634
+8,Ranjan et al.,2020,6,,,,,64,8,,,,,sentence,sp-dataset,,ann,0.93
+9,Chen et al.,2019,12,,,2000,,64,33,,3,3,4,image,iaps,spm,svm,0.99
+10,Bush et al.,2017,32,3,philips,2000,30,80,37,90,3,3,3,image,iaps,afni,svm,0.59
