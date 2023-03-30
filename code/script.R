@@ -70,8 +70,35 @@ sink()
 res.modscnrrtr <- rma(yi, vi, mods = ~ scnnr_tr, data = dat)
 res.modscnrrtr
 
+# -------------------- Backtransform Model Coefficients for Freeman Tukey Double Arcine Transformation -----------------
 
-#--------------------------------------------------------
+# check back-transformation for individual outcomes
+transf.ipft(dat$yi,dat$no_subjects)
+
+# back-transformation of the estimated average using the harmonic mean of the n's
+pred <- predict(res, transf = transf.ipft.hm, targs = list(ni=dat$no_subjects))
+pred
+
+# calculate back-transformed CI bounds manually
+ci.lb <- transf.ipft(dat$yi - 1.96*sqrt(dat$vi), dat$no_subjects)
+ci.ub <- transf.ipft(dat$yi + 1.96*sqrt(dat$vi), dat$no_subjects)
+
+# create forest plot with CI bounds supplied and then add the model estimate using addpoly()
+forest(
+  dat$classi_accuracy, 
+  ci.lb=ci.lb, 
+  ci.ub=ci.ub,  
+  slab=paste(dat$author, dat$year, sep=", "),
+  ylim=c(-0.5,14),
+  xlim=c(-.5,1.8),
+  digits=3, 
+  xlab="Backtransformed Proportions",
+  header = TRUE
+  )
+addpoly(pred$pred, ci.lb=pred$ci.lb, ci.ub=pred$ci.ub, row=0, digits=3)
+#abline(h=0.5)
+
+#---------------------------------------------------------------------
 
 #Alternative Way to Check Publication Bias
 mes_ss <- robu(
