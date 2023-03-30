@@ -117,10 +117,7 @@ power <- mapower_ul(
 power_dat <- power$dat
 power_dat <- power_dat %>% select(1:8)
 power_dat
-
-sink(file="./results/console-power-median-data.txt", split = TRUE)
 power_med <- power$power_median_dat
-sink()
 
 list_power <- list(power_med)
 
