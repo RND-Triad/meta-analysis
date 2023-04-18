@@ -1,0 +1,8 @@
+study_id,authors,year,no_subjects,scnnr_mgntc_strngth,scnnr_model,scnnr_tr,scnnr_te,acq_matrix,acq_slices,acq_fa,vxl_dim_1,vxl_dim_2,vxl_dim_3,stmli_type,stmli_coll,pre_proc_tool,classi_tchnqe,classi_accuracy
+1,Kim et al.,2016,11,3,siemens,2200,35,64,36,90,3,3,3,audio-visual,own,spm,logistic-regression,0.61
+2,Hsu et al.,2022,44,3,siemens,3200,20,,,90,3,3,3,dynamic-facial-expression-video,own,spm,svm,0.5494
+3,Frid et al.,2019,11,3,siemens,2000,30,64,33,80,3,3,4,autobiographical-memories,navo-ando,spm,adaboost,0.62
+4,Fournel et al.,2011,16,3,allegra,3000,30,64,49,80,3,3,3,image,own,fsl,self-org-map,0.80237
+5,Qiao et al.,2011,17,,,,,,,,,,,image,iaps,,svm,0.78
+6,Chuanji et al.,2020,21,3,siemens,1000,35,70,40,62,3,3,2.7,audio-visual,own,spm,gnb,0.737
+7,Svetlana et al.,2020,93,3,,,,,,,,,,various,past-studies,spm,mvpa,0.72

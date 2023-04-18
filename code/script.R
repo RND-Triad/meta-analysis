@@ -7,7 +7,7 @@ library(robumeta)
 
 
 # Reading CSV File
-file_path <-  "./data/within-subjects-data.csv"
+file_path <-  "./data/Meta Analysis Data Sheet - Across_Accuracy_Data.csv"
 dat <- read.csv(file_path, sep=",")
 View(dat)
 
@@ -53,8 +53,9 @@ forest(
   digits = c(2,1),
   cex = .8
   )
-text(-.4, 12, "Author(s), Year", pos=2, cex= .8)
-text( 3.1, 12, "Accuracy [95% CI]", pos=2, cex= .8)
+# y = 16 for within, y =9 for across
+text(-0.04, 9, "Author(s), Year", pos=2, cex= .8)
+text( 2.2, 9, "Accuracy [95% CI]", pos=2, cex= .8)
 
 
 # Publication Bias from Funnel Plot
@@ -71,6 +72,7 @@ res.modscnrrtr <- rma(yi, vi, mods = ~ scnnr_tr, data = dat)
 res.modscnrrtr
 
 # -------------------- Backtransform Model Coefficients for Freeman Tukey Double Arcine Transformation -----------------
+metapro
 
 # check back-transformation for individual outcomes
 transf.ipft(dat$yi,dat$no_subjects)
@@ -89,7 +91,7 @@ forest(
   ci.lb=ci.lb, 
   ci.ub=ci.ub,  
   slab=paste(dat$author, dat$year, sep=", "),
-  ylim=c(-0.5,14),
+  ylim=c(-0.5,16),
   xlim=c(-.5,1.8),
   digits=3, 
   xlab="Backtransformed Proportions",
